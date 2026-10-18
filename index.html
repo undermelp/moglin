@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night of the Moglin</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="screen" class="menu">
+      <div class="panel">
+        <p class="kicker">Beware the...</p>
+        <h1>Night of the Moglin</h1>
+        <div class="rule"></div>
+        <p class="prompt" id="prompt">Click to begin</p>
+        <div id="run-times">
+          <div class="time-block">
+            <span class="time-label">Survived</span>
+            <span class="time-value" id="time-run"></span>
+          </div>
+          <div class="time-block">
+            <span class="time-label">Best</span>
+            <span class="time-value" id="time-best"></span>
+          </div>
+        </div>
+        <p class="stats" id="stats"></p>
+        <ul id="run-perks"></ul>
+        <ul class="help">
+          <li><b>WASD</b>Move</li>
+          <li><b>Shift</b>Slide</li>
+          <li><b>Space</b>Jump</li>
+          <li><b>Mouse</b>Aim</li>
+          <li><b>Left click</b>Shoot</li>
+          <li><b>Right click</b>Melee</li>
+          <li><b>F</b>Throw molotov</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="hud" hidden>
+      <div id="announce"><div id="announce-title"></div><div id="announce-desc"></div></div>
+      <div id="perk-card">
+        <div id="perk-card-name"></div>
+        <div class="rule"></div>
+        <div id="perk-card-desc"></div>
+      </div>
+      <ul id="perks"></ul>
+      <div id="status"><span id="wave">WAVE 1</span><span id="kills">0 KILLS</span><span id="level">LV 0</span><span id="xp">0/500 XP</span></div>
+      <div id="cross"><span></span><span></span><span></span><span></span></div>
+      <div id="hit"><i></i><i></i><i></i><i></i></div>
+      <div id="hurt"></div>
+      <div id="lower">
+        <div id="health">
+          <div id="health-num">100</div>
+          <div id="health-track"><div id="health-fill"></div></div>
+        </div>
+        <div id="ammo">
+          <div id="weapon">CROSSBOW</div>
+          <div id="counts"><span id="mag">∞</span><span id="slash" hidden>/</span><span id="reserve"></span></div>
+          <div id="molotov">
+            <svg id="molotov-icon" viewBox="0 0 32 40" aria-hidden="true">
+              <path transform="rotate(-14 16 22)" d="M16 1.8c3.2 3.4 2.4 6.2 5.2 9.4 1 1.2-2 3-3.8 3v4l5.2 2.2-1.2 15.2h-10.8l-1.2-15.2 5.2-2.2v-4c-2-.2-4.4-2-3.4-3.6 2-2.6 1.6-5.2 4.2-8.8z"/>
+            </svg>
+            <span id="molotov-count">0</span>
+            <span id="molotov-key">F</span>
+          </div>
+          <div id="reload-label"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
